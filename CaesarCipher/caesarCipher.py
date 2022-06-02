@@ -7,10 +7,10 @@ def encryption(message, n):
             ret += char
         elif (char.isupper()):
             # 65 is A in ascii
-            ret += chr((ord(char) + n - 65) % 26 + 65)
+            ret += chr((ord(char) + n))
         else:
             # 97 is a in ascii
-            ret += chr((ord(char) + n - 97) % 26 + 97)
+            ret += chr((ord(char) + n))
 
     return ret
 
@@ -23,10 +23,10 @@ def decryption(message, n):
             ret += char
         elif (char.isupper()):
             # 65 is A in ascii
-            ret += chr((ord(char) - n - 65) % 26 + 65)
+            ret += chr((ord(char) - n))
         else:
             # 97 is a in ascii
-            ret += chr((ord(char) - n - 97) % 26 + 97)
+            ret += chr((ord(char) - n))
 
     return ret
 
